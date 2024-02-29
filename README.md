@@ -1,4 +1,4 @@
-# Neovim                                                 " Map Ctrl+S as save in Insert mode
+# Neovim
 
 ## Windows
 
