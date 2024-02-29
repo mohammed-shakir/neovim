@@ -15,8 +15,13 @@ The init.vim file should be placed in '%USERPROFILE%\AppData\Local\nvim\init.vim
 
 ### 3. Install Plugins
 
-1. Open Neovim by running `nvim`.
-2. Install the plugins by running `:PlugInstall`.
+1. Install `vim-plug` by running:
+```powershell
+    iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
+        ni "$(@($env:XDG_DATA_HOME, $env:LOCALAPPDATA)[$null -eq $env:XDG_DATA_HOME])/nvim-data/site/autoload/plug.vim" -Force
+```
+2. Open Neovim by running `nvim`.
+3. Install the plugins by running `:PlugInstall`.
 
 ## Linux
 
@@ -30,5 +35,10 @@ The init.vim file should be placed in '~/.config/nvim/init.vim'. If that directo
 
 ### 4. Install Plugins
 
-1. Open Neovim by running `nvim`.
-2. Install the plugins by executing `:PlugInstall`.
+1. Install `vim-plug` by running:
+```bash
+    sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+           https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+2. Open Neovim by running `nvim`.
+3. Install the plugins by executing `:PlugInstall`.
